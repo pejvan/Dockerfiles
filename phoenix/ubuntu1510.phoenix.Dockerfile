@@ -27,7 +27,7 @@ ENV LC_ALL "en_US.UTF-8"
 
 #installing phoenix, based on the instructions in http://www.phoenixframework.org/docs/installation
 RUN mix local.hex
-RUN mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.0.3/phoenix_new-1.0.3.ez
+RUN yes | mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.0.3/phoenix_new-1.0.3.ez
 
 CMD ["/bin/sh"]
 
