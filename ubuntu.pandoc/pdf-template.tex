@@ -2,6 +2,28 @@
 % SOURCE: https://raw.githubusercontent.com/karlseguin/the-little-mongodb-book/master/common/pdf-template.tex
 
 \def\tightlist{}
+\def\KeywordTok{}
+%\def\NormalTok{}{}
+\def\OtherTok{}
+%\def\DataTypeTok{}{}
+\newenvironment{Shaded}{}{}
+\newenvironment{Highlighting}{}{}
+%\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+%\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+%\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
 
 % Fonts and typography
 %% Typography
@@ -69,35 +91,35 @@
 \definecolor{gray}{rgb}{0.4,0.4,0.4}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.6}
 
-\lstdefinelanguage{cpp}{
-      backgroundcolor=\color{lgrey},  
-      basicstyle=\footnotesize \ttfamily \color{black} \bfseries,   
-      breakatwhitespace=false,       
-      breaklines=true,               
-      captionpos=b,                   
-      commentstyle=\color{dkgreen},   
-      deletekeywords={...},          
-      escapeinside={\%*}{*)},                  
-      frame=single,                  
-      language=C++,                
-      keywordstyle=\color{purple},  
-      morekeywords={BRIEFDescriptorConfig,string,TiXmlNode,DetectorDescriptorConfigContainer,istringstream,cerr,exit}, 
+\lstdefinestyle{customCpp}{
+      backgroundcolor=\color{lgrey},
+      %basicstyle=\footnotesize \ttfamily \color{black} \bfseries,
+      breakatwhitespace=false,
+      breaklines=true,
+      captionpos=b,
+      commentstyle=\color{dkgreen},
+      deletekeywords={...},
+      escapeinside={\%*}{*)},
+      frame=single,
+      language=C++,
+      keywordstyle=\color{purple},
+      %morekeywords={BRIEFDescriptorConfig,string,TiXmlNode,DetectorDescriptorConfigContainer,istringstream,cerr,exit},
       identifierstyle=\color{black},
-      stringstyle=\color{blue},      
-      numbers=right,                 
-      numbersep=5pt,                  
-      numberstyle=\tiny\color{black}, 
-      rulecolor=\color{black},        
-      showspaces=false,               
-      showstringspaces=false,        
-      showtabs=false,                
-      stepnumber=1,                   
-      tabsize=5,                     
-      title=\lstname,                 
+      stringstyle=\color{blue},
+      %numbers=right,
+      %numbersep=5pt,
+      %numberstyle=\tiny\color{black},
+      rulecolor=\color{black},
+      showspaces=false,
+      showstringspaces=false,
+      showtabs=false,
+      stepnumber=1,
+      tabsize=4,
+      title=\lstname,
 }
 
 \lstset{
-  language = C++,
+  language = [ISO]C++,
   backgroundcolor = \color{Aluminium1},
   extendedchars = true,
   basicstyle = \normalsize\ttfamily,
@@ -105,9 +127,9 @@
   showspaces = false,
   tabsize = 1,
   breaklines = true,
-  showtabs = false
+  showtabs = false,
+  style=customCpp
 }
-
 
 % Links
 
