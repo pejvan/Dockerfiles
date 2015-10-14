@@ -44,14 +44,14 @@ RUN git clone https://github.com/isocpp/CppCoreGuidelines.git
 
 ADD pdf-template.tex /tmp/
 RUN apt-get install fonts-arkpandora
-RUN sed 's/Verdana/Veranda/g' -i ../pdf-template.tex
-RUN sed 's/Consolas/Source Code Pro/g'  -i ../pdf-template.tex
+RUN sed 's/Verdana/Veranda/g' -i pdf-template.tex
+RUN sed 's/Consolas/Source Code Pro/g'  -i pdf-template.tex
 
 
 VOLUME ["/tmp"]
 
 WORKDIR /tmp/CppCoreGuidelines
-ADD convertMdBlockCodes.rb /tmp/CppCoreGuidelines
+ADD convertMdBlockCodes.rb /tmp/CppCoreGuidelines/
 RUN ruby convertMdBlockCodes.rb
 ENTRYPOINT ["pandoc", "--template=../pdf-template.tex", "CppCoreGuidelines-converted.md", "--indented-code-classes=cpp", "--latex-engine=xelatex",  "-o", "CppCoreGuidelines.pdf"]
 #CMD ["/bin/sh"]
